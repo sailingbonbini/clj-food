@@ -66,12 +66,29 @@
       first
       clojure.string/trim))
 
+(defn nutrition-value
+  "Extract a single nutrition value (like 'sodiumContent' for instance) from the dom. "
+  [dom value]
+  (let [v (html/select dom [:ul.nutrition :li :span.nutrition__value])]
+    (->
+     (filter #(= (:itemprop (:attrs %)) value) v)
+     first
+     :content
+     first)))
 
 (defn nutrition
   "Extract nutrition data such as kcal, fat, saturates, carbs, sugars, fibre, protein and salt from a recipe"
   [dom]
-  (-> dom
-      (html/select [:ul.nutrition :li])))
+  {
+   :fat (nutrition-value dom "fatContent")
+   :calories (nutrition-value dom "calories")
+   :satfat (nutrition-value dom "saturatedFatContent")
+   :carbs (nutrition-value dom "carbohydrateContent")
+   :sugar (nutrition-value dom "sugarContent")
+   :fibre (nutrition-value dom "fiberContent")
+   :protein (nutrition-value dom "proteinContent")
+   :salt (nutrition-value dom "sodiumContent")
+   })
 
 
 (defn -main
