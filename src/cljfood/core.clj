@@ -79,17 +79,24 @@
 (defn nutrition
   "Extract nutrition data such as kcal, fat, saturates, carbs, sugars, fibre, protein and salt from a recipe"
   [dom]
-  {
-   :fat (nutrition-value dom "fatContent")
+  {:fat (nutrition-value dom "fatContent")
    :calories (nutrition-value dom "calories")
    :satfat (nutrition-value dom "saturatedFatContent")
    :carbs (nutrition-value dom "carbohydrateContent")
    :sugar (nutrition-value dom "sugarContent")
    :fibre (nutrition-value dom "fiberContent")
    :protein (nutrition-value dom "proteinContent")
-   :salt (nutrition-value dom "sodiumContent")
-   })
+   :salt (nutrition-value dom "sodiumContent")})
 
+(defn get-ingredient
+  [node]
+  (cond
+    (= (count (:content node)) 1) (:content node)
+    :else
+    (let
+        [start (first (:content node))
+         r (:content (first (:content(nth (:content node) 2))))]
+      start)))
 
 (defn -main
   []
