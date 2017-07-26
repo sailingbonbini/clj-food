@@ -1,11 +1,79 @@
 (ns cljfood.core
-  (:gen-class))
+  (:gen-class)
+  (:require [net.cgrand.enlive-html :as html]
+            [org.httpkit.client :as http]))
 
-(defn hello
-  "Simple hello world"
-  []
-  (println "Hello world"))
+(def recipies ["https://www.bbcgoodfood.com/recipes/thai-green-pork-lettuce-cups"
+               "https://www.bbcgoodfood.com/recipes/omelette-pancakes-tomato-pepper-sauce"
+               "https://www.bbcgoodfood.com/recipes/chicken-fattoush"
+               "https://www.bbcgoodfood.com/recipes/pomegranate-chicken-almond-couscous"])
+
+(defn get-url
+  "Get the dom for the URL provided"
+  ([]
+   (get-url (rand-nth recipies)))
+  ([url]
+   (:body @(http/get url {:insecure? true}))))
+
+(defn get-dom
+  [html]
+  (html/html-snippet html))
+
+(defn title
+  "Extract the title of a recipe"
+  [dom]
+  (-> dom
+      (html/select [:h1.recipe-header__title])
+      first
+      :content
+      first))
+
+(defn prep-time
+  "Extract the prepping time from a recipe"
+  [dom]
+  (-> dom
+      (html/select [:span.recipe-details__cooking-time-prep :span.mins])
+      first
+      :content
+      first))
+
+(defn cooking-time
+  "Extract the cooking time from a recipe"
+  [dom]
+  (-> dom
+      (html/select [:span.recipe-details__cooking-time-cook :span.mins])
+      first
+      :content
+      first))
+
+(defn skill-level
+  "Extract the skill level from a recipe"
+  [dom]
+  (-> dom
+      (html/select [:section.recipe-details__item--skill-level :span.recipe-details__text])
+      first
+      :content
+      first
+      clojure.string/trim))
+
+(defn servings
+  "Extract the number of servings from a recipe"
+  [dom]
+  (-> dom
+      (html/select [:section.recipe-details__item--servings :span.recipe-details__text])
+      first
+      :content
+      first
+      clojure.string/trim))
+
+
+(defn nutrition
+  "Extract nutrition data such as kcal, fat, saturates, carbs, sugars, fibre, protein and salt from a recipe"
+  [dom]
+  (-> dom
+      (html/select [:ul.nutrition :li])))
+
 
 (defn -main
   []
-  (hello))
+  (print "Nothing to see here, yet."))
