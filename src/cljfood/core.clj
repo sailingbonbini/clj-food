@@ -1,7 +1,8 @@
 (ns cljfood.core
   (:gen-class)
   (:require [net.cgrand.enlive-html :as html]
-            [org.httpkit.client :as http]))
+            [org.httpkit.client :as http]
+            [clojurewerkz.balagan.core :as b]))
 
 (def recipies ["https://www.bbcgoodfood.com/recipes/thai-green-pork-lettuce-cups"
                "https://www.bbcgoodfood.com/recipes/omelette-pancakes-tomato-pepper-sauce"
@@ -90,13 +91,8 @@
 
 (defn get-ingredient
   [node]
-  (cond
-    (= (count (:content node)) 1) (:content node)
-    :else
-    (let
-        [start (first (:content node))
-         r (:content (first (:content(nth (:content node) 2))))]
-      start)))
+  ;;todo: get ingredients
+  (b/select node [:* :content]))
 
 (defn -main
   []
