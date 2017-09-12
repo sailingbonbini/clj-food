@@ -4,8 +4,7 @@
             [org.clojure/clojure "1.8.0"]
             [cpmcdaniel/boot-copy "1.0"]
             [http-kit "2.2.0"]
-            [enlive "1.1.6"]
-            [clojurewerkz/balagan "1.0.5"]]
+            [enlive "1.1.6"]]
           :source-paths #{"src/"})
  
 (require '[cpmcdaniel.boot-copy :refer :all])

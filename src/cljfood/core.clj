@@ -1,8 +1,7 @@
 (ns cljfood.core
   (:gen-class)
   (:require [net.cgrand.enlive-html :as html]
-            [org.httpkit.client :as http]
-            [clojurewerkz.balagan.core :as b]))
+            [org.httpkit.client :as http]))
 
 (def recipies ["https://www.bbcgoodfood.com/recipes/thai-green-pork-lettuce-cups"
                "https://www.bbcgoodfood.com/recipes/omelette-pancakes-tomato-pepper-sauce"
@@ -103,7 +102,7 @@
          :content
          first))))
 
-(defn get-ingredients
+(defn ingredients
   [dom]
   (let [items (html/select dom [:li.ingredients-list__item])]
     (map extract-ingredients items)
@@ -113,10 +112,32 @@
   [node]
   (first (:content node)))
 
-(defn get-prep-method
+(defn prep-method
   [dom]
   (let [p (html/select dom [:li.method__item :p])]
         (map get-prep-item p)))
+
+(defn get-recipe
+  [url]
+  (let [d (get-dom (get-url url))
+        title (title d)
+        preptime (prep-time d)
+        cooking-time (cooking-time d)
+        skill-level (skill-level d)
+        servings (servings d)
+        nutrition (nutrition d)
+        ingredients (ingredients d)
+        prep-met (prep-method d)]
+    {
+     :title title
+     :prep-time preptime
+     :cooking-time cooking-time
+     :skill-level skill-level
+     :servings servings
+     :nutrition nutrition
+     :ingredients ingredients
+     :prep-method prep-met
+     }))
 
 (defn -main
   []
