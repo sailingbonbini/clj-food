@@ -89,10 +89,25 @@
    :protein (nutrition-value dom "proteinContent")
    :salt (nutrition-value dom "sodiumContent")})
 
-(defn get-ingredient
+(defn extract-ingredients
   [node]
-  ;;todo: get ingredients
-  (b/select node [:* :content]))
+  (cond
+    (= (count (:content node)) 1)
+    (first (:content node))
+    (> (count (:content node)) 1)
+    (str
+     (first (:content node))
+     (-> node
+         (html/select [:a.ingredients-list__glossary-link])
+         first
+         :content
+         first))))
+
+(defn get-ingredients
+  [dom]
+  (let [items (html/select dom [:li.ingredients-list__item])]
+    (map extract-ingredients items)
+    ))
 
 (defn -main
   []

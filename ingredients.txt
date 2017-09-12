@@ -1,0 +1,248 @@
+({:tag :li,
+  :attrs {:class "ingredients-list__item", :itemprop "ingredients"},
+  :content ("1 tbsp vegetable oil")}
+ {:tag :li,
+  :attrs {:class "ingredients-list__item", :itemprop "ingredients"},
+  :content
+  ("200g "
+   {:tag :a,
+    :attrs
+    {:href "/glossary/couscous",
+     :class "ingredients-list__glossary-link",
+     :data-tooltip-content "#ingredients-glossary > article",
+     :data-tooltip-width "350",
+     :data-tooltip-hide-delay "200",
+     :data-tooltip-flyout "true"},
+    :content ("couscous")}
+   {:tag :span,
+    :attrs
+    {:class "ingredients-list__glossary-element",
+     :id "ingredients-glossary"},
+    :content
+    ({:tag :article,
+      :attrs
+      {:id "node-251921",
+       :role "main",
+       :class
+       "node node-glossary-item node-teaser node-teaser clearfix main row grid-padding"},
+      :content
+      ({:tag :div,
+        :attrs {:class "node-image"},
+        :content
+        (" "
+         {:tag :a,
+          :attrs {:href "/glossary/couscous"},
+          :content
+          ({:tag :img,
+            :attrs
+            {:src
+             "//www.bbcgoodfood.com/sites/default/files/styles/bbcgf_thumbnail_search/public/glossary/couscous.jpg?itok=QZnSitYy",
+             :width "100",
+             :height "100",
+             :alt "Couscous",
+             :title
+             "Consisting of many tiny granules made from steamed and dried durum wheat, couscous has become a popular alternative to rice and pasta"},
+            :content nil})})}
+       {:tag :h2,
+        :attrs {:class "node-title node-glossary-title"},
+        :content
+        ({:tag :a,
+          :attrs {:href "/glossary/couscous"},
+          :content ("Couscous")})}
+       " "
+       {:tag :span,
+        :attrs {:class "fonetic text-style-alt"},
+        :content ("koos-koos")}
+       {:tag :p,
+        :attrs nil,
+        :content
+        ("Consisting of many tiny granules made from steamed and dried durum wheat, couscous has become a…")}
+       " ")})})}
+ {:tag :li,
+  :attrs {:class "ingredients-list__item", :itemprop "ingredients"},
+  :content ("1 chicken stock cube")}
+ {:tag :li,
+  :attrs {:class "ingredients-list__item", :itemprop "ingredients"},
+  :content ("1 large red onion, halved and thinly sliced")}
+ {:tag :li,
+  :attrs {:class "ingredients-list__item", :itemprop "ingredients"},
+  :content
+  ("600g "
+   {:tag :a,
+    :attrs
+    {:href "/glossary/chicken",
+     :class "ingredients-list__glossary-link",
+     :data-tooltip-content "#ingredients-glossary--2 > article",
+     :data-tooltip-width "350",
+     :data-tooltip-hide-delay "200",
+     :data-tooltip-flyout "true"},
+    :content ("chicken")}
+   " mini fillets"
+   {:tag :span,
+    :attrs
+    {:class "ingredients-list__glossary-element",
+     :id "ingredients-glossary--2"},
+    :content
+    ({:tag :article,
+      :attrs
+      {:id "node-252111",
+       :role "main",
+       :class
+       "node node-glossary-item node-teaser node-teaser clearfix main row grid-padding"},
+      :content
+      ({:tag :div,
+        :attrs {:class "node-image"},
+        :content
+        (" "
+         {:tag :a,
+          :attrs {:href "/glossary/chicken"},
+          :content
+          ({:tag :img,
+            :attrs
+            {:src
+             "//www.bbcgoodfood.com/sites/default/files/styles/bbcgf_thumbnail_search/public/glossary/chicken.jpg?itok=jdlkaAI7",
+             :width "100",
+             :height "100",
+             :alt "Chicken",
+             :title
+             "Chicken's many plus points - its versatility, as well as the ease and speed with which it can be cooked - make it one of the most popular meats around"},
+            :content nil})})}
+       {:tag :h2,
+        :attrs {:class "node-title node-glossary-title"},
+        :content
+        ({:tag :a,
+          :attrs {:href "/glossary/chicken"},
+          :content ("Chicken")})}
+       " "
+       {:tag :span,
+        :attrs {:class "fonetic text-style-alt"},
+        :content ("chik-en")}
+       {:tag :p,
+        :attrs nil,
+        :content
+        ("Chicken's many plus points - its versatility, as well as the ease and speed with which it…")}
+       " ")})})}
+ {:tag :li,
+  :attrs {:class "ingredients-list__item", :itemprop "ingredients"},
+  :content
+  ("4 tbsp tagine spice paste (available from Tesco or Marks & Spencer), or 2 tbsp "
+   {:tag :a,
+    :attrs
+    {:href "/glossary/harissa",
+     :class "ingredients-list__glossary-link",
+     :data-tooltip-content "#ingredients-glossary--3 > article",
+     :data-tooltip-width "350",
+     :data-tooltip-hide-delay "200",
+     :data-tooltip-flyout "true"},
+    :content ("harissa")}
+   {:tag :span,
+    :attrs
+    {:class "ingredients-list__glossary-element",
+     :id "ingredients-glossary--3"},
+    :content
+    ({:tag :article,
+      :attrs
+      {:id "node-259601",
+       :role "main",
+       :class
+       "node node-glossary-item node-teaser node-teaser clearfix main row grid-padding"},
+      :content
+      ({:tag :div,
+        :attrs {:class "node-image"},
+        :content
+        (" "
+         {:tag :a,
+          :attrs {:href "/glossary/harissa"},
+          :content
+          ({:tag :img,
+            :attrs
+            {:src
+             "//www.bbcgoodfood.com/sites/default/files/styles/bbcgf_thumbnail_search/public/glossary/harissa.jpg?itok=416WxbZc",
+             :width "100",
+             :height "100",
+             :alt "Harissa",
+             :title
+             "This hot, aromatic paste made from chilli and assorted other spices and herbs is spicy and fragrant"},
+            :content nil})})}
+       {:tag :h2,
+        :attrs {:class "node-title node-glossary-title"},
+        :content
+        ({:tag :a,
+          :attrs {:href "/glossary/harissa"},
+          :content ("Harissa")})}
+       " "
+       {:tag :span,
+        :attrs {:class "fonetic text-style-alt"},
+        :content ("ha-riss-ah")}
+       {:tag :p,
+        :attrs nil,
+        :content
+        ("This hot, aromatic paste made from chilli and assorted other spices and herbs is spicy and…")}
+       " ")})})}
+ {:tag :li,
+  :attrs {:class "ingredients-list__item", :itemprop "ingredients"},
+  :content
+  ("190ml bottle pomegranate juice (not sweetened; we used Pom Wonderful)")}
+ {:tag :li,
+  :attrs {:class "ingredients-list__item", :itemprop "ingredients"},
+  :content ("100g pack pomegranate seeds")}
+ {:tag :li,
+  :attrs {:class "ingredients-list__item", :itemprop "ingredients"},
+  :content ("100g pack toasted flaked almond")}
+ {:tag :li,
+  :attrs {:class "ingredients-list__item", :itemprop "ingredients"},
+  :content
+  ("small pack "
+   {:tag :a,
+    :attrs
+    {:href "/glossary/mint",
+     :class "ingredients-list__glossary-link",
+     :data-tooltip-content "#ingredients-glossary--4 > article",
+     :data-tooltip-width "350",
+     :data-tooltip-hide-delay "200",
+     :data-tooltip-flyout "true"},
+    :content ("mint")}
+   ", chopped"
+   {:tag :span,
+    :attrs
+    {:class "ingredients-list__glossary-element",
+     :id "ingredients-glossary--4"},
+    :content
+    ({:tag :article,
+      :attrs
+      {:id "node-261061",
+       :role "main",
+       :class
+       "node node-glossary-item node-teaser node-teaser clearfix main row grid-padding"},
+      :content
+      ({:tag :div,
+        :attrs {:class "node-image"},
+        :content
+        (" "
+         {:tag :a,
+          :attrs {:href "/glossary/mint"},
+          :content
+          ({:tag :img,
+            :attrs
+            {:src
+             "//www.bbcgoodfood.com/sites/default/files/styles/bbcgf_thumbnail_search/public/glossary/mint-resized.png?itok=YXmI8kex",
+             :width "100",
+             :height "100",
+             :alt "Mint",
+             :title "Mint"},
+            :content nil})})}
+       {:tag :h2,
+        :attrs {:class "node-title node-glossary-title"},
+        :content
+        ({:tag :a,
+          :attrs {:href "/glossary/mint"},
+          :content ("Mint")})}
+       " "
+       {:tag :span,
+        :attrs {:class "fonetic text-style-alt"},
+        :content ("mi-nt")}
+       {:tag :p,
+        :attrs nil,
+        :content
+        ("There are several types of mint, each with its own subtle difference in flavour and appearance.…")}
+       " ")})})})
