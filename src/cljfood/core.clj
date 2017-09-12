@@ -109,6 +109,15 @@
     (map extract-ingredients items)
     ))
 
+(defn get-prep-item
+  [node]
+  (first (:content node)))
+
+(defn get-prep-method
+  [dom]
+  (let [p (html/select dom [:li.method__item :p])]
+        (map get-prep-item p)))
+
 (defn -main
   []
   (print "Nothing to see here, yet."))
